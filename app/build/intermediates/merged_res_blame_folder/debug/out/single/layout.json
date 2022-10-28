@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.android.myapplication.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "com.example.android.myapplication.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\andro\\.gradle\\daemon\\7.4\\com.example.android.myapplication.app-mergeDebugResources-33:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\andro\\.gradle\\daemon\\7.4\\com.example.android.myapplication.app-main-36:\\layout\\activity_main.xml"
+    }
+]

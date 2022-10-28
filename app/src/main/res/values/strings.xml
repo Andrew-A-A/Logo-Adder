@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Logo Adder</string>
+    <string name="logo">Logo</string>
+    <string name="load_photo">Load photo</string>
+    <string name="load_video">Load video</string>
+    <string name="save_photo">Save photo</string>
+    <string name="save_video">Save video</string>
+    <string name="clear">Clear</string>
+    <string name="logo_adder">Logo Adder</string>
+    <string name="background">Background</string>
+</resources>
