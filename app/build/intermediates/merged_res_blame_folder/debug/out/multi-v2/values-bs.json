@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.android.myapplication.app-mergeDebugResources-32:/values-bs/values-bs.xml",
+            "outputFile": "com.example.android.myapplication.app-mergeDebugResources-33:/values-bs/values-bs.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\205feb206244c8c1b4b56fcdc8d69988\\transformed\\core-1.8.0\\res\\values-bs\\values-bs.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "92",
-                        "startColumns": "4",
-                        "startOffsets": "7752",
-                        "endColumns": "100",
-                        "endOffsets": "7848"
-                    }
-                },
                 {
                     "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\53edefe15d403f8467620aa121e38059\\transformed\\material-1.7.0\\res\\values-bs\\values-bs.xml",
                     "from": {
@@ -37,6 +20,23 @@
                         "endLines": "6,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90",
                         "endColumns": "12,81,95,125,80,65,91,76,62,107,65,55,70,59,53,118,56,61,53,74,123,87,82,144,84,85,87,53,53,65,73,77,86,71,76,72,69,92,71,91,95,73,75,95,52,66,86,86,61,63,62,107,101,100,104,57,57,79",
                         "endOffsets": "372,3179,3275,3401,3482,3548,3640,3717,3780,3888,3954,4010,4081,4141,4195,4314,4371,4433,4487,4562,4686,4774,4857,5002,5087,5173,5261,5315,5369,5435,5509,5587,5674,5746,5823,5896,5966,6059,6131,6223,6319,6393,6469,6565,6618,6685,6772,6859,6921,6985,7048,7156,7258,7359,7464,7522,7580,7660"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\f3889f18d4f26e70cef4e17d11226053\\transformed\\core-1.9.0\\res\\values-bs\\values-bs.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "92",
+                        "startColumns": "4",
+                        "startOffsets": "7752",
+                        "endColumns": "100",
+                        "endOffsets": "7848"
                     }
                 },
                 {

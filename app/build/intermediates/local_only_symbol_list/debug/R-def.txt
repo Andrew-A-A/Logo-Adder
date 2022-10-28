@@ -26,6 +26,7 @@ id open_video_btn
 id save_photo_btn
 id save_video_btn
 id textView
+id videoView
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_foreground

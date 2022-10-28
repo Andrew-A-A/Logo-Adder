@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.android.myapplication.app-mergeDebugResources-32:/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "com.example.android.myapplication.app-mergeDebugResources-33:/values-zh-rHK/values-zh-rHK.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\205feb206244c8c1b4b56fcdc8d69988\\transformed\\core-1.8.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "91",
-                        "startColumns": "4",
-                        "startOffsets": "6880",
-                        "endColumns": "100",
-                        "endOffsets": "6976"
-                    }
-                },
                 {
                     "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\35247393b79a5fe3c4f500e2adf3d76f\\transformed\\appcompat-1.5.1\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "from": {
@@ -54,6 +37,23 @@
                         "endLines": "5,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89",
                         "endColumns": "12,66,89,106,72,61,77,58,57,77,56,55,58,57,53,85,55,57,53,64,92,73,77,119,62,62,76,49,50,65,63,68,74,60,70,66,59,79,62,82,84,73,64,75,47,63,75,77,61,63,62,79,74,75,75,53,54,68",
                         "endOffsets": "292,2920,3010,3117,3190,3252,3330,3389,3447,3525,3582,3638,3697,3755,3809,3895,3951,4009,4063,4128,4221,4295,4373,4493,4556,4619,4696,4746,4797,4863,4927,4996,5071,5132,5203,5270,5330,5410,5473,5556,5641,5715,5780,5856,5904,5968,6044,6122,6184,6248,6311,6391,6466,6542,6618,6672,6727,6796"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\f3889f18d4f26e70cef4e17d11226053\\transformed\\core-1.9.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "91",
+                        "startColumns": "4",
+                        "startOffsets": "6880",
+                        "endColumns": "100",
+                        "endOffsets": "6976"
                     }
                 }
             ]

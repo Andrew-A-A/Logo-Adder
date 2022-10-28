@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.android.myapplication.app-mergeDebugResources-32:/values-fa/values-fa.xml",
+            "outputFile": "com.example.android.myapplication.app-mergeDebugResources-33:/values-fa/values-fa.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\205feb206244c8c1b4b56fcdc8d69988\\transformed\\core-1.8.0\\res\\values-fa\\values-fa.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "91",
-                        "startColumns": "4",
-                        "startOffsets": "7518",
-                        "endColumns": "100",
-                        "endOffsets": "7614"
-                    }
-                },
                 {
                     "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\53edefe15d403f8467620aa121e38059\\transformed\\material-1.7.0\\res\\values-fa\\values-fa.xml",
                     "from": {
@@ -37,6 +20,23 @@
                         "endLines": "5,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89",
                         "endColumns": "12,81,96,128,83,62,89,68,59,90,63,58,66,61,54,122,57,60,54,71,136,80,81,129,73,73,85,50,53,65,70,76,80,72,73,69,73,85,73,88,91,73,72,88,50,66,82,83,61,63,62,93,106,92,104,54,57,77",
                         "endOffsets": "304,3076,3173,3302,3386,3449,3539,3608,3668,3759,3823,3882,3949,4011,4066,4189,4247,4308,4363,4435,4572,4653,4735,4865,4939,5013,5099,5150,5204,5270,5341,5418,5499,5572,5646,5716,5790,5876,5950,6039,6131,6205,6278,6367,6418,6485,6568,6652,6714,6778,6841,6935,7042,7135,7240,7295,7353,7431"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\andro\\.gradle\\caches\\transforms-3\\f3889f18d4f26e70cef4e17d11226053\\transformed\\core-1.9.0\\res\\values-fa\\values-fa.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "91",
+                        "startColumns": "4",
+                        "startOffsets": "7518",
+                        "endColumns": "100",
+                        "endOffsets": "7614"
                     }
                 },
                 {

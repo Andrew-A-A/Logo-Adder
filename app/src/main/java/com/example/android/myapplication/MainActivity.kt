@@ -1,6 +1,8 @@
 package com.example.android.myapplication
+
 import android.content.Intent
 import android.graphics.*
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
@@ -9,10 +11,14 @@ import android.widget.Toast
 import android.widget.VideoView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.arthenica.ffmpegkit.FFmpegKit
+import com.arthenica.ffmpegkit.FFmpegKitConfig
 import com.example.android.myapplication.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.*
+import java.io.File
+import java.io.FileOutputStream
 import java.time.LocalDateTime
-
 
 
 const val PICK_IMAGE= 1
@@ -21,7 +27,9 @@ const val PICK_VIDEO= 2
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var inputImage: Bitmap? =null
-    private var output: Bitmap? =null
+    private var outputImage: Bitmap? =null
+    private var videoUri:Uri? =null
+    @OptIn(DelicateCoroutinesApi::class)
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,13 +44,16 @@ class MainActivity : AppCompatActivity() {
         binding.openVideoBtn.setOnClickListener {
             pickVideo()
         }
+      binding.saveVideoBtn.setOnClickListener {
+          videoUri?.let { it1 -> runBlocking { withContext(newSingleThreadContext("Converting")) {addWatermarkVideo(it1)} }}
+      }
 
         binding.savePhotoBtn.setOnClickListener {
             val now= LocalDateTime.now()
             try {
                 MediaStore.Images.Media.insertImage(
                     contentResolver,
-                    output,
+                    outputImage,
                     "Logo Adder $now",
                     "yourDescription"
                 )
@@ -69,6 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -77,9 +89,9 @@ class MainActivity : AppCompatActivity() {
                 Snackbar.make(binding.root.rootView.rootView, "Error while Loading Image !", Snackbar.LENGTH_LONG).show()
             else {
                inputImage = MediaStore.Images.Media.getBitmap(this.contentResolver,data.data)
-                 output= mark(inputImage!!)
+                 outputImage= mark(inputImage!!)
                 binding.savePhotoBtn.isEnabled=true
-                binding.imageView.setImageBitmap(output)
+                binding.imageView.setImageBitmap(outputImage)
             }
         }
         else if (requestCode == PICK_VIDEO){
@@ -97,7 +109,26 @@ class MainActivity : AppCompatActivity() {
                 catch (e:java.lang.Exception){
                     e.printStackTrace()
                 }
+                videoUri=data.data
             }
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private suspend fun addWatermarkVideo(videoUri: Uri) {
+
+        val videoPath = FFmpegKitConfig.getSafParameterForRead(this.applicationContext, videoUri)
+        var now = LocalDateTime.now().toString()
+        now = now.replace(':', '+')
+        saveImage()
+        val command =
+            "-i $videoPath -i /storage/emulated/0/logo.png -filter_complex  \"[1]colorchannelmixer = aa =0.8, scale = iw*0.8:-1[a];[0][a] overlay = x ='if(lt(mod(t\\,24)\\,12)\\,W-w-W*10/100\\,W*10/100)':y = 'if(lt(mod(t+6\\,24)\\,12)\\,H-h-H*5/100\\,H*5/100)'\" /storage/emulated/0/LogoAdder$now.mp4"
+        try {
+            withContext(Dispatchers.IO) {
+                FFmpegKit.execute(command)
+            }
+        } catch (e: java.lang.Exception) {
+            e.printStackTrace()
         }
     }
 
@@ -127,4 +158,20 @@ class MainActivity : AppCompatActivity() {
         canvas.drawBitmap(waterMark,  w-waterMark.width.toFloat(), h-waterMark.height.toFloat(), null)
         return result
     }
+    private fun saveImage() {
+        val bm = BitmapFactory.decodeResource(resources, R.drawable.logo)
+        val extStorageDirectory = "/storage/emulated/0/"
+        val file = File(extStorageDirectory, "logo.png")
+        if (!file.exists()) {
+            try {
+                val outStream = FileOutputStream(file)
+                bm.compress(Bitmap.CompressFormat.PNG, 100, outStream)
+                outStream.flush()
+                outStream.close()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+
 }

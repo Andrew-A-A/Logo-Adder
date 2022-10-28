@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
@@ -40,9 +41,13 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
   public final TextView textView;
 
+  @NonNull
+  public final VideoView videoView;
+
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button clearBtn, ImageView imageView, ImageView imageView2, Button openPhotoBtn,
-      Button openVideoBtn, Button savePhotoBtn, Button saveVideoBtn, TextView textView) {
+      Button openVideoBtn, Button savePhotoBtn, Button saveVideoBtn, TextView textView,
+      VideoView videoView) {
     super(_bindingComponent, _root, _localFieldCount);
     this.clearBtn = clearBtn;
     this.imageView = imageView;
@@ -52,6 +57,7 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
     this.savePhotoBtn = savePhotoBtn;
     this.saveVideoBtn = saveVideoBtn;
     this.textView = textView;
+    this.videoView = videoView;
   }
 
   @NonNull
