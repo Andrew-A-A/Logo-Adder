@@ -21,7 +21,8 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
         sViewsWithIds.put(R.id.save_video_btn, 5);
         sViewsWithIds.put(R.id.clear_btn, 6);
         sViewsWithIds.put(R.id.textView, 7);
-        sViewsWithIds.put(R.id.imageView, 8);
+        sViewsWithIds.put(R.id.videoView, 8);
+        sViewsWithIds.put(R.id.imageView, 9);
     }
     // views
     @NonNull
@@ -32,18 +33,19 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityMainBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.Button) bindings[6]
-            , (android.widget.ImageView) bindings[8]
+            , (android.widget.ImageView) bindings[9]
             , (android.widget.ImageView) bindings[1]
             , (android.widget.Button) bindings[2]
             , (android.widget.Button) bindings[3]
             , (android.widget.Button) bindings[4]
             , (android.widget.Button) bindings[5]
             , (android.widget.TextView) bindings[7]
+            , (android.widget.VideoView) bindings[8]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
