@@ -8,4 +8,5 @@
     <string name="clear">Clear</string>
     <string name="logo_adder">Logo Adder</string>
     <string name="background">Background</string>
+    <string name="load_custom_logo">Load custom logo</string>
 </resources>
