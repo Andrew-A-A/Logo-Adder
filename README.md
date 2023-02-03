@@ -9,10 +9,10 @@ App uses FFmpeg kit to add animated watermark to the videos
 ⚠️For Android 11+ : 
   User need to give the app the permission to manage all files in case of adding watermark to a video <br>
   (As FFmpeg lib. can't access the watermark image without this permission)
-* Add a watermark to any image in the local storage and preview it before saving, and after taping "Save photo" image saved instantly in pictures folder
+● Add a watermark to any image in the local storage and preview it before saving, and after taping "Save photo" image saved instantly in pictures folder
 <img src="https://user-images.githubusercontent.com/85433014/216597807-ac3f9af7-50e3-4d0f-816f-57c35d1a4341.png" width="250"/>
-* User can add a custom watermark and will be previewed (Watermark must have a transparent background for a good experience)
+● User can add a custom watermark and will be previewed (Watermark must have a transparent background for a good experience)
 <img src="https://user-images.githubusercontent.com/85433014/216600100-0abc58ce-8ae1-46f4-8440-64ec6e2dc443.png" width="250"/>
-* Adding a watermark to videos is also possible and while encoding the output video a loading circle appear to user till video is saved in a folder named "LogoAdder"
+● Adding a watermark to videos is also possible and while encoding the output video a loading circle appear to user till video is saved in a folder named "LogoAdder"
 <img src="https://user-images.githubusercontent.com/85433014/216604110-0bd564ec-1fb3-4539-aad1-52337c0ac1fc.png" width="250"/>
 Took me a 40 sec to add a watermark to a  30sec , 1080p-Video (May vary with device)
